@@ -1,13 +1,27 @@
 <h1 style="text-align: center;background-color: aqua;">Directive Example & Angular pipes</h1><br>
-<ol>
-    <li  *ngFor='let data of arrayItem ; index as i; odd as isOdd'>
-        <font color='red' *ngIf='isOdd'> {{data}}</font>
-    </li>
-</ol>
+<div>
+    <ol>
+        <li *ngFor='let data of arrayItem ; index as i; odd as isOdd'>
+            <font color='red' *ngIf='isOdd'> {{data}}</font>
+        </li>
+    </ol>
+</div>
 <ul>
     <ng-template ngFor let-x [ngForOf]='arrayItem'>
-    <li >
-        <font color='Green'> {{x}}</font>       
-    </li>
-</ng-template>
+        <li>
+            <font color='Green'> {{x}}</font>
+        </li>
+    </ng-template>
 </ul>
+<h2 style="background-color: aquamarine;text-align: center;">Let's learn ngSwitch</h2>
+<div>
+    <input type="text" #case (keyup)='0'>
+    <div [ngSwitch]='case.value'>
+        <div *ngSwitchCase="'Rahul'"> I am Rahul</div>
+        <div *ngSwitchCase="'Mayank'"> I am Mayank</div>
+        <div *ngSwitchCase="'Varun'"> I am Varun</div>
+        <div *ngSwitchCase="'Sanket'"> I am Sanket</div>
+        <div *ngSwitchDefault>None of our Team Member</div>
+    
+</div>
+</div>
