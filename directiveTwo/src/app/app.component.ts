@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'directiveTwo';
  arrayItem = ['name','age','genedr','profession']
+ country = 'India'
 }

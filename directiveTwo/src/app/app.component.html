@@ -22,6 +22,10 @@
         <div *ngSwitchCase="'Varun'"> I am Varun</div>
         <div *ngSwitchCase="'Sanket'"> I am Sanket</div>
         <div *ngSwitchDefault>None of our Team Member</div>
-    
-</div>
-</div>
+
+    </div>
+  </div>
+  <h2 style="background-color: aquamarine;text-align: center;"> Attribute Directives example</h2>
+  <div [ngStyle]="{'background-color': country == 'India' ? 'red' : 'Green' }">I am from {{country}}</div><br><br>
+  <div [ngClass]="'one two'">Lets apply ngClass here in string form ..!!!</div><br>
+  <div [ngClass]="['one', 'two']">Lets apply ngClass in array form here..!!!</div>
