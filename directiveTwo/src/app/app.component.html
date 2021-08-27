@@ -1,1 +1,13 @@
-<h1 style="text-align: center;background-color: aqua;">Directive Example & Angular pipes</h1>
+<h1 style="text-align: center;background-color: aqua;">Directive Example & Angular pipes</h1><br>
+<ol>
+    <li  *ngFor='let data of arrayItem ; index as i; odd as isOdd'>
+        <font color='red' *ngIf='isOdd'> {{data}}</font>
+    </li>
+</ol>
+<ul>
+    <ng-template ngFor let-x [ngForOf]='arrayItem'>
+    <li >
+        <font color='Green'> {{x}}</font>       
+    </li>
+</ng-template>
+</ul>
