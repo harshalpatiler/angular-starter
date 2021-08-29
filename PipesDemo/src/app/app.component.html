@@ -1,1 +1,8 @@
-<h1>Lets learn Pipes</h1>
+<h1>Lets learn Event binding</h1>
+<button (click)='clickfun()'>clickme</button><br><br>
+<button on-click='clickfun2()'>clickme</button><br><br>
+<div>
+ Enter Data here:<input type="text" (keyup)="keyUp()" (keydown)='keyDown()'>
+ <br><br>
+ Enter data:<input type="text" (input)="input()">
+</div>
