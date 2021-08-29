@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,14 @@ export class AppComponent {
     console.log('This is key down event'
     )
   }
-  input(){
+  msg: any;
+  input(data: any) {
     console.log('This is input event');
+    this.msg = data;
   }
+  newmsg: any = 'hello world';
+  funct(val: any){
+    this.newmsg = val;
+  }
+  newdata: any= 'hey there';
 }
