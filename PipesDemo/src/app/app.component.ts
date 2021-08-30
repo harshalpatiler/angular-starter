@@ -4,9 +4,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+
 })
 export class AppComponent {
-  title = 'PipesDemo';
+  title = 'Pipes Demo Example';
   clickfun() {
     console.log("Simple example of Click event");
   }
@@ -30,4 +31,10 @@ export class AppComponent {
     this.newmsg = val;
   }
   newdata: any= 'hey there';
+  obj = {
+    'name': "Harshal",
+    'city': "Dhule",
+    'education': 'BE'
+  }
+    newdate = new Date()
 }

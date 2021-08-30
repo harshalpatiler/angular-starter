@@ -15,3 +15,23 @@
     <input type="text"[(ngModel)]='newdata' >
     <p>{{newdata}}</p>
 </div>
+<h2>Let's begin pipe Example</h2>
+<h3>{{ title| uppercase}}</h3>
+<h3>{{ title| lowercase}}</h3>
+<h3>{{ title| titlecase}}</h3>
+<h3>{{ title| slice:3:10}}</h3>
+<h3>{{obj}}</h3>
+<h3>{{obj | json}}</h3>
+<h3 ngNonBindable>{{12.4545515154 | number:'2.1-5'}} ?</h3>
+<h3>{{12.4545515154 | number:'2.1-5'}}</h3>
+<h3>{{6.5 | percent}}</h3>
+<h1>Parameterized pipes</h1>
+<h3>{{12.4545515154 | currency:'INR'}}</h3>
+<h3>{{12.4545515154 | currency:'INR' : false}}</h3>
+<h2>Chaining pipes(Multiple pipes)</h2>
+<h3>{{12.4545515154 | currency:'INR' : true : '3.2-3'}}</h3>
+<h3>{{12.4545515154 | currency:'INR' : '3.2-3' }}</h3>
+<h4>From above u can see order is also important</h4>
+<h3>{{12.4545515154 | currency:'INR' : false : '3.2-3' }}</h3>
+<h3>{{newdate | date}}</h3>
+<h3>{{newdate | date : 'fullDate' | uppercase }}</h3>
