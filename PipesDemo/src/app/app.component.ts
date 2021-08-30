@@ -37,4 +37,5 @@ export class AppComponent {
     'education': 'BE'
   }
     newdate = new Date()
+    term:string = "kalyani Patil"
 }

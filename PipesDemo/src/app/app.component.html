@@ -1,4 +1,4 @@
-<h1>Lets learn Event binding</h1>
+<h2>Lets learn Event binding</h2>
 <button (click)='clickfun()'>clickme</button><br><br>
 <button on-click='clickfun2()'>clickme</button><br><br>
 <div>
@@ -25,7 +25,7 @@
 <h3 ngNonBindable>{{12.4545515154 | number:'2.1-5'}} ?</h3>
 <h3>{{12.4545515154 | number:'2.1-5'}}</h3>
 <h3>{{6.5 | percent}}</h3>
-<h1>Parameterized pipes</h1>
+<h2>Parameterized pipes</h2>
 <h3>{{12.4545515154 | currency:'INR'}}</h3>
 <h3>{{12.4545515154 | currency:'INR' : false}}</h3>
 <h2>Chaining pipes(Multiple pipes)</h2>
@@ -35,3 +35,12 @@
 <h3>{{12.4545515154 | currency:'INR' : false : '3.2-3' }}</h3>
 <h3>{{newdate | date}}</h3>
 <h3>{{newdate | date : 'fullDate' | uppercase }}</h3>
+<h3>{{newdate | date : "dd-MM-yyyy"}}</h3>
+<h2>Custom pipe example</h2>
+<h4>Custom Welcome pipe</h4>
+<h3>{{term | welcome}}</h3>
+<h4>Bold Pipe example</h4>
+<h3 [outerHTML]='term | bold'></h3>
+<h4>Reverse string custom Pipe example</h4>
+<h3>{{term | reverse}}</h3>
+<h4>Limit word custom Pipe example</h4>
