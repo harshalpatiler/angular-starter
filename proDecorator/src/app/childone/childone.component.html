@@ -1,0 +1,6 @@
+<h1>Child Component </h1>
+
+<div>The data coming from parent: {{pData}}</div>
+<div>
+    The data of child:<input type="text" #childData (keyup)="sendData(childData.value)" />
+</div>

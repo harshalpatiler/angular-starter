@@ -1,0 +1,7 @@
+<h1>parent component</h1>
+<div>This data from parent:<input type="text" #pComp (keyup)="0" />
+</div>
+<div>
+    This data is coming from child:{{cData}}
+</div>
+<app-childone [pData]='pComp.value' (childEvent)="getData($event)"></app-childone>
