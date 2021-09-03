@@ -1,0 +1,8 @@
+<h1>
+    Parent component 
+</h1>
+<div>
+    Enter Data here: <input type="text" #pdata  (keyup)="0" />
+</div>
+<div>The data coming from Child component:{{cdata}}</div>
+<app-child [parentData]='pdata.value'  (childEvent)="cdata=$event"></app-child>
