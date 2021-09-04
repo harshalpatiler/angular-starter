@@ -8,12 +8,17 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ChildComponent implements OnInit {
   @Input() parentData: string
   @Output() childEvent = new EventEmitter()
-  constructor() { }
-    
+  constructor() {
+    console.log("parent component constructor is called");
+  }
+  ngOnChanges() {
+    console.log(' Child component ngOnChanges is method is called');
+  }
+  
   ngOnInit(): void {
   }
   childData: string;
-  sendData(val:any) {
+  sendData(val: any) {
     this.childEvent.emit(val);
   }
 

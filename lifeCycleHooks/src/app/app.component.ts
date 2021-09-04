@@ -5,13 +5,20 @@ import { MessageserviceService } from './messageservice.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  encapsulation:ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   title = 'lifeCycleHooks';
-  msg:string=""
-  constructor( private _messageServ:MessageserviceService){
+  msg: string = ""
+  constructor(private _messageServ: MessageserviceService) {
     this.msg = _messageServ.getmessage();
-    console.log("appp component constructor is called")
+    console.log("appp component constructor is called");
+  }
+  ngOnChanges() {
+    console.log(' App component ngOnChanges is method is called');
+
+  }
+  ngOnInit(){
+    console.log("This ngOnInit of app component");
   }
 }
