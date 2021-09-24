@@ -9,6 +9,6 @@ export class Testdata implements InMemoryDbService {
             { id: 3, name: "Sanskrit", category: 'Lesson' },
             { id: 4, name: "Hindi", category: 'Essay' }
         ]
-        return bookDetails;
+        return {books:bookDetails};
     }
 }
