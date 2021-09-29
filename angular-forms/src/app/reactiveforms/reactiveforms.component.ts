@@ -13,9 +13,10 @@ export class ReactiveformsComponent implements OnInit {
   constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
+    this.setForm()
   }
-  Registration(){
-
+  Registration(data:any){
+console.log(data);
   }
 setForm(){
   this.refForm = this.fb.group({
