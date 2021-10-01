@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -8,21 +8,37 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./reactiveforms.component.css']
 })
 export class ReactiveformsComponent implements OnInit {
-  refForm : FormGroup;
+  refForm: FormGroup;
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.setForm()
+    this.setForm();
   }
-  Registration(data:any){
-console.log(data);
+  Registration(data: any) {
+    console.log(data);
   }
-setForm(){
-  this.refForm = this.fb.group({
-   fname: new FormControl(),
-   lname: new FormControl(),
-   email: new FormControl()
-  })
-}
+
+  setForm() {
+    this.refForm = this.fb.group({
+      //  fname: new FormContro
+      //  lname: new FormControl(),
+      //  email: new FormControl(),
+      fname: ['', Validators.required],
+      lname: [''],
+      email: [''],
+    })
+  }
+  resetFun() {
+    this.refForm.reset();
+  }
+  filldata() {
+    this.refForm.setValue({
+      fname: "Harshal",
+      lname: 'Patil',
+      email: "hp@gmail.com"
+    })
+  }
+
+
 }
